@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* Primary */
+    --verydarkblue: hsl(233, 47%, 7%); /* (main background) */
+    --darkdesaturatedblue: hsl(244, 38%, 16%); /* (card background) */
+    --softviolet: hsl(277, 64%, 61%); /* (accent) */
+    /* Neutral */
+    --white: hsl(0, 0%, 100%); /* (main heading, stats) */
+    --slightlytransparentwhite-main: hsla(0, 0%, 100%, 0.75); /* (main paragraph) */
+    --slightlytransparentwhite-stat: hsla(0, 0%, 100%, 0.6); /* (stat headings) */
+}
+
+body {
+    background: var(--verydarkblue);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+main {
+    margin: 10em 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background: #0d0d0d;
+    width: 80em;
+    height: 30em;
+}
+.card {
+    background: var(--darkdesaturatedblue);
+    width: 45em;
+    height: 30em;
+    border-radius: 0.5em 0 0 0.5em;
+}
+.cardinfo {
+    padding: 3em 4em;
+}
+.cardinfo h1 {
+    font-family: 'Inter';
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+.cardinfo .insights {
+    color: var(--softviolet);
+}
+.cardinfo p {
+    font-size: 16px;
+    font-family: 'Lexend Deca';
+    color: var(--slightlytransparentwhite-main);
+}
+main img {
+    width: 35em;
+    height: 30em;
+    border-radius: 0 0.5em 0.5em 0;
+}
+main .imagefilter {
+    position: absolute;
+    opacity: 50%;
+    background-color: hsl(284deg 89% 40%);
+    width: 35em;
+    height: 30em;
+    filter: saturate(120%) contrast(100%) brightness(79.2%);
+    border-radius: 0 0.5em 0.5em 0;
+}
+.stats {
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+}
+.stats h1 {
+    font-size: 32px;
+}
+.stats p {
+    font-size: 15px;
+    color: var(--slightlytransparentwhite-stat);
+}
+footer {
+    position: inherit;
+    bottom: 0;
+    font-family: 'Lexend Deca';
+    font-size: 14px;
+    background: var(--darkdesaturatedblue);
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    color: white;
+}
+footer a {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(277, 41%, 49%);
+    transition: color 0.5s;
+}
+footer a:hover {
+    color: hsl(277, 100%, 71%);
+}
+
+@media screen and (max-width:900px) {
+    body {
+        overflow: auto;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        background: #0d0d0d;
+        width: 25em;
+        height: 60em;
+    }
+    main img {
+        width: 25em;
+        height: 20em;
+        border-radius: 0.5em 0.5em 0 0;
+    }
+    main .imagefilter {
+        position: absolute;
+        opacity: 50%;
+        background-color: hsl(284deg 89% 40%);
+        width: 25em;
+        height: 20em;
+        filter: saturate(120%) contrast(100%) brightness(79.2%);
+        border-radius: 0.5em 0.5em 0 0;
+    }
+    .card {
+        background: var(--darkdesaturatedblue);
+        width: 25em;
+        height: 40em;
+        border-radius: 0 0 0.5em 0.5em;
+    }
+    .cardinfo {
+        text-align: center;
+        padding: 3em 1em;
+    }
+    .cardinfo h1 {
+        font-family: 'Inter';
+        font-size: 37px;
+        font-weight: 700;
+        color: white;
+    }
+    .para {
+        padding: 0 3em;
+    }
+    .cardinfo .insights {
+        color: var(--softviolet);
+    }
+    .cardinfo p {
+        font-size: 15px;
+        font-family: 'Lexend Deca';
+        color: var(--slightlytransparentwhite-main);
+    }
+    .stats {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        line-height: 0.3;
+    }
+    .stats h1 {
+        font-size: 32px;
+    }
+    .stats p {
+        font-size: 15px;
+        color: var(--slightlytransparentwhite-stat);
+    }
+    footer {
+        position: inherit;
+    }
+}
